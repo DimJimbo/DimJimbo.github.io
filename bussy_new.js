@@ -259,7 +259,10 @@ function initMap() {
 			station_manager.usr_pos = pos
 			
 			map.setCenter(pos)
-			usr_marker.setMap(null)
+			
+			if (usr_marker.setMap) {
+				usr_marker.setMap(null)
+			}
 			usr_marker = new google.maps.Marker({
 				position: pos,
 				map: map,
