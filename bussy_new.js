@@ -260,7 +260,7 @@ function initMap() {
 			
 			map.setCenter(pos)
 			
-			if (usr_marker.setMap) {
+			if (usr_marker) {
 				usr_marker.setMap(null)
 			}
 			usr_marker = new google.maps.Marker({
