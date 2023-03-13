@@ -273,7 +273,9 @@ window.addEventListener('message', (pos) => {
 	})
 
 rb.addEventListener('click', () => {
+	alert('CLICKED')
 	window.parent.postMessage('')
+	alert('MESSAGE POSTED')
 	
 })
 
