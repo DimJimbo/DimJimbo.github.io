@@ -1,0 +1,278 @@
+@font-face {
+	font-family: merriweather;
+	src: url(C:\\Users\\Dimitris\\Desktop\\WEB\\bussy\\Fonts\\Merriweather-Regular.ttf);
+}
+
+* {
+	font-family: sans-serif;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+
+::-webkit-scrollbar-thumb {
+	background: #44F;
+	border-radius: 5px;
+}
+
+body {
+	margin: auto;
+	height: fit-content;
+}
+
+.range_tt {
+	width: 4em;
+	height: 1em;
+	background-color: white;
+	color: black;
+	position: absolute;
+	border-radius: 50% / 100%;
+	box-shadow: 0px 0px 5px 2px #5558;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	height: 10vh;
+	background-color: #95aeba;
+	line-height: 10vh;
+	text-align: right;
+	
+	z-index: 1;
+}
+
+header button {
+	padding: 5px;
+	width: fit-content;
+	width: fit-content;
+	height: fit-content;
+	
+	background-color: transparent;
+	border: none;
+	color: white;
+
+}
+
+button.header_large {
+	font-size: 2em;
+	float: left;
+}
+
+button.header_small {
+	font-size: 1.2em;
+	
+}
+
+button.header_large > span {
+	position: relative;
+	top: -3vh;
+}
+
+
+img.logo {
+	margin: 2vh;
+	height: 50px;
+	aspect-ratio: 0.92;
+}
+
+#menu_buttons {
+	display: inline-flex;
+	width: fit-content;
+	height: fit-content;
+}
+
+#menu_buttons > button {
+	margin-right: 1vw;
+	position: relative;
+	top: 2vh;
+	border-radius: 25% / 75%;
+	transition: box-shadow 300ms linear;
+}
+
+#menu_buttons > button:hover {
+	box-shadow: 0px 0px 5px #FFFA;
+}
+
+#main {
+	position: absolute;
+	
+	
+	background: url(C:\\Users\\Dimitris\\Desktop\\WEB\\bussy\\Fonts\\dark_busy_road.jpg) no-repeat center center;
+	background-size: cover;
+	
+	
+	width: 100%;
+	height: 100vh;
+}
+
+#MAP {
+	width: 40vw;
+	aspect-ratio: 1;
+	
+	position: absolute;
+	right: 5vw;
+	top: 12.5vh;
+	
+	border: 3px solid grey;
+	box-shadow: 0px 0px 8px #FFFA;
+	
+}
+
+#SELECTION {
+	
+	height: 80vh;
+	width: 50vw;
+	
+	position: absolute;
+	left: 3vw;
+	top: 12.5vh;
+	
+	
+	background-color: #000D;
+	border-radius: 2% / 3%;
+	
+	overflow-y: overlay;
+	overflow-x: hidden;
+}
+
+#FUEL_SELECT {
+	margin-top: 1vh;
+	padding-bottom: 0.1vw;
+	border-bottom: 4px solid white;
+	width: calc(100% - 2vw);
+	
+	text-align: left;
+}
+
+#FUEL_SELECT:nth-child(1) {
+	margin-left: 1vw;
+}
+
+.fuel_button {
+	height: 4vh;
+	
+	border: none;
+	background-color: transparent;
+	color: #555;
+	transition: color 500ms linear;
+}
+
+.fuel_button:hover {
+	color: #FFF;
+}
+
+.selected_button {
+	color: #FFF;
+}
+
+.body_small {
+	font-size: 0.9em;
+}
+
+.body_mid {
+	font-size: 1.1em;
+}
+
+.body_large {
+	font-size: 2.4em;
+}
+
+#FILTER_SELECT {
+	margin-top: 5vh;
+	width: 80%;
+	height: fit-content;
+}
+
+input[type=range] {
+	width: 70%;
+	accent-color: #00F;
+	left: 0px;
+}
+
+
+
+label {
+	color: white;
+	float: left;
+}
+
+select {
+	border: none;
+	background-color: transparent;
+	color: white;
+	font-size: 1em;
+	padding: 5px;
+	
+}
+
+option {
+	background-color: black;
+	color: white;
+	
+}
+
+#refresh_button {
+	width: 40px;
+	height: 40px;
+	border: none;
+	background: url(Fonts/white_refresh.png) no-repeat center center;
+	background-size: cover;
+	
+	position: relative;
+	left: 20vw;
+	top: 2vh;
+	
+}
+
+#refresh_button:focus {
+	transition-duration: 500ms;
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transform: rotate(360deg);
+}
+
+#STATIONS {
+	width: calc(100% - 2vw);
+	margin-top: 2vh;
+	border-top: 4px solid white;
+}
+
+.station_inst {
+	margin-top: 10px;
+	width: 40vw;
+	height: 20vh;
+	border: 2px solid white;
+}
+
+
+.station_inst > p.station_name {
+	position: relative;
+	top: -1vh;
+	color: white;
+	margin-bottom: 0px;
+}
+
+.cont {
+	margin-top: 1px;
+}
+
+
+.cont > p.dist {
+	color: white;
+	font-size: 2em;
+	margin-top: 10px;
+	
+}
+
+.cont > p.address {
+	color: white;
+	font-size: 1em;
+	
+}

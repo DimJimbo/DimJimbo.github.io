@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel='stylesheet' type='text/css' href='bussy_new.css'>
+		<title>RoadTip</title>
+	</head>
+	
+	<body>
+		<header>
+			<button class='header_large'>
+				<img class='logo' src='Fonts\RoadTip_logo_transparent.png'><span>RoadTip.gr</span>
+			</button>
+			<div id='menu_buttons'>
+				<button class='header_small'>About Us</button>
+				<button class='header_small'>Our Team</button>
+				<button class='header_small'>Contact Us</button>
+			</div>
+		</header>
+		
+		<div id='main'>
+			<div id='MAP'></div>
+			<div id='SELECTION'>
+				<div id='FUEL_SELECT'>
+					<button class='fuel_button selected_button body_mid'>ELECTRIC</button>
+					<button class='fuel_button body_mid'>GAS</button>
+				</div>
+				<center>
+					<div id='FILTER_SELECT'>
+						<label class='body_mid' for='dist_input'>Distance:</label>
+						<input id='dist_input' type='range' min='0' max='100' value='20' onInput='updRangeVal()'><br>
+						<div class='range_tt body_small'></div>
+					</div>
+					<button id='refresh_button'></button>
+					<div id='STATIONS'>
+						
+					</div>
+				</center>
+			</div>
+		</div>
+	</body>
+	<script src='bussy_new.js'></script>
+	
+	
+	
+</html>
