@@ -273,8 +273,9 @@ window.addEventListener('message', (pos) => {
 	})
 
 rb.addEventListener('click', () => {
-	console.log('rb pushed')
+	console.log('rb pushed', window.parent)
 	window.parent.postMessage('fuck me')
+	console.log('sent message')
 	
 })
 
