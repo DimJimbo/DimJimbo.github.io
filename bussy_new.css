@@ -219,23 +219,20 @@ option {
 }
 
 #refresh_button {
-	width: 40px;
-	height: 40px;
-	border: none;
-	background: url(Fonts/white_refresh.png) no-repeat center center;
-	background-size: cover;
-	
+	width: fit-content;
+	height: fit-content;
+	border: 2px solid white;
+	background-color: transparent;
+	color: white;
+	font-size: 1em;
+	padding: 5px 10px 5px 10px;
+	border-radius: 25% / 50%;
+
 	position: relative;
 	left: 20vw;
-	top: 2vh;
+	top: 1.5vh;
 	
-}
-
-#refresh_button:focus {
-	transition-duration: 500ms;
-	transition-property: transform;
-	transition-timing-function: ease-out;
-	transform: rotate(360deg);
+	
 }
 
 #STATIONS {
