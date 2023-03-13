@@ -243,11 +243,9 @@ function api() {
 				zoom: 11,
 				})
 	service = new google.maps.places.PlacesService(map);
-	
-	initMap()
 }
 			
-window.onMessage((pos) => {
+window.addEventListener('message', (pos) => {
 	station_manager.usr_pos = pos
 
 	map.setCenter(pos)
