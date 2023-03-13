@@ -247,7 +247,7 @@ function api() {
 			
 window.addEventListener('message', (pos) => {
 	station_manager.usr_pos = pos
-
+	console.log('1')
 	map.setCenter(pos)
 
 	if (usr_marker) {
@@ -273,9 +273,9 @@ window.addEventListener('message', (pos) => {
 	})
 
 rb.addEventListener('click', () => {
-	alert('CLICKED')
-	window.parent.postMessage('')
-	alert('MESSAGE POSTED')
+	console.log(window.parent)
+	window.parent.postMessage('fuck me')
+	console.log('2')
 	
 })
 
