@@ -90,9 +90,9 @@ let service
 let usr_marker
 
 let icons = {
-	'Gas stations': 'C:\\Users\\Dimitris\\Desktop\\WEB\\bussy\\Fonts\\red-pin.png', 
-	'Charging stations': 'C:\\Users\\Dimitris\\Desktop\\WEB\\bussy\\Fonts\\blue-pin.png', 
-	'Self': 'C:\\Users\\Dimitris\\Desktop\\WEB\\bussy\\Fonts\\black-pin.png'
+	'Gas stations': 'red-pin.png', 
+	'Charging stations': 'blue-pin.png', 
+	'Self': 'black-pin.png'
 }
 
 /*
