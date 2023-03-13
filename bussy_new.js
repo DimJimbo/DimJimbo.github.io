@@ -280,9 +280,6 @@ function initMap() {
 			
 			service.textSearch(req, (stations, status) => {station_manager.populate(stations, status)})
 			
-        },
-        () => {
-          handleLocationError(true, MAP, map.getCenter())
         }
       )
     }
