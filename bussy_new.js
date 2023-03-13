@@ -247,47 +247,36 @@ function api() {
 	initMap()
 }
 			
-function initMap() {
-	if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-			}
-			
-			station_manager.usr_pos = pos
-			
-			map.setCenter(pos)
-			
-			if (usr_marker) {
-				usr_marker.setMap(null)
-			}
-			usr_marker = new google.maps.Marker({
-				position: pos,
-				map: map,
-				icon: icons['Self']
-			})
-			
-			let req = {
-				location: pos,
-				radius: d_input.value*100,
-				query: station_manager.query
-			}
-			
-			
-			
-			
-			service.textSearch(req, (stations, status) => {station_manager.populate(stations, status)})
-			
-        }
-      )
-    }
-	
-}
+window.onMessage((pos) => {
+	station_manager.usr_pos = pos
+
+	map.setCenter(pos)
+
+	if (usr_marker) {
+		usr_marker.setMap(null)
+	}
+	usr_marker = new google.maps.Marker({
+		position: pos,
+		map: map,
+		icon: icons['Self']
+	})
+
+	let req = {
+		location: pos,
+		radius: d_input.value*100,
+		query: station_manager.query
+	}
+
+
+
+
+	service.textSearch(req, (stations, status) => {station_manager.populate(stations, status)})
+
+	})
 
 rb.addEventListener('click', () => {
-	initMap()
+	window.parent.postMessage('')
+	
 })
 
 for (let t of ftypes) {
