@@ -95,15 +95,6 @@ let icons = {
 	'Self': 'black-pin.png'
 }
 
-/*
-function getPhoto(station, status) {
-	if (status == google.maps.places.PlacesServiceStatus.OK) {
-		console.log(station)
-		console.log(station.url)
-	}
-}
-*/
-
 function updRangeVal() {
 	let val = d_input.value
 	let d_input_n = d_input.valueAsNumber
@@ -135,14 +126,6 @@ class StationsManager {
 			for (let i = 0; i < stations.length; i++) {
 				let place = stations[i]
 				
-				/*
-				let req = {
-					placeId: place.place_id
-				}
-				service.getDetails(req, getPhoto)
-				*/
-				
-				
 				let marker_pos = {
 					lat: place.geometry.location.lat(),
 					lng: place.geometry.location.lng()
@@ -158,7 +141,7 @@ class StationsManager {
 				let dlng = usr_lng - plc_lng
 				
 				let d = 2*R*Math.asin(Math.sqrt(Math.sin(dlat/2)*Math.sin(dlat/2) + Math.cos(usr_lat)*Math.cos(plc_lat)*Math.sin(dlng/2)*Math.sin(dlng/2)))
-				console.log(d*10, d_input.value)
+
 				if (!(d*10 <= d_input.value)) {
 					continue
 				}
