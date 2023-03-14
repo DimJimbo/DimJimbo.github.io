@@ -209,6 +209,7 @@ option {
 	top: -1vh;
 	color: white;
 	margin-bottom: 0px;
+	font-size: 1em;
 }
 
 .cont {
@@ -220,6 +221,7 @@ option {
 	color: white;
 	font-size: 2em;
 	margin-top: 10px;
+	font-family: sans-serif;
 	
 }
 
