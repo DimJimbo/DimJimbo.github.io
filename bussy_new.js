@@ -85,6 +85,12 @@ const offset = d_input.clientWidth/(parseInt(d_input.max) - parseInt(d_input.min
 const thumbWidth = 5
 let MAP = document.getElementById('MAP')
 
+window.addEventListener('message', (pos) => {
+	console.log('RECV')
+	console.log(pos)	
+	
+})
+
 let map
 let service
 let usr_marker
