@@ -245,9 +245,14 @@ function api() {
 	service = new google.maps.places.PlacesService(map);
 }
 			
-window.addEventListener('message', (pos) => {
+function initMap(){
+	
+	let pos = {
+		lat: 38.04481522028965,
+		lng: 23.791080055375335
+	}
 	station_manager.usr_pos = pos
-	console.log('iframe received')
+	
 	map.setCenter(pos)
 
 	if (usr_marker) {
@@ -273,9 +278,7 @@ window.addEventListener('message', (pos) => {
 	})
 
 rb.addEventListener('click', () => {
-	console.log('rb pushed', window.parent)
-	window.parent.postMessage('fuck me')
-	console.log('sent message')
+	initMap()
 	
 })
 
