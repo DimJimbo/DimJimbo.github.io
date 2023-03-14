@@ -101,8 +101,10 @@ function updRangeVal() {
 	let d_input_n = d_input.valueAsNumber
 	let max = parseInt(d_input.max)
 	let min = parseInt(d_input.min)
-	d_input_tt.style.left = 210 + ((d_input_n - min) * offset - d_input_tt.offsetWidth / 2 - (d_input_n / max - min - 0.5) * thumbWidth) + 'px'
+	let pad = Math.round(parseInt(sel.width)*0.27)
+	d_input_tt.style.left = pad + ((d_input_n - min) * offset - d_input_tt.offsetWidth / 2 - (d_input_n / max - min - 0.5) * thumbWidth) + 'px'
 	d_input_tt.innerHTML = `${d_input.value/10}` + 'km'
+	console.log(d_input_tt.style.left)
 }
 
 updRangeVal()
