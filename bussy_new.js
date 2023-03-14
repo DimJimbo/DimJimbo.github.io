@@ -275,7 +275,7 @@ function initMap(){
 
 	service.textSearch(req, (stations, status) => {station_manager.populate(stations, status)})
 
-	})
+	}
 
 rb.addEventListener('click', () => {
 	initMap()
