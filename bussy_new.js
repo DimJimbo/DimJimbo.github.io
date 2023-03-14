@@ -109,6 +109,18 @@ function updRangeVal() {
 
 updRangeVal()
 
+function randPos(pos) {
+	if (Math.round(Math.random())) {
+		pos.lat += Math.random()/8000
+		pos.lng += Math.random()/8000
+	} else {
+		pos.lat -= Math.random()/8000
+		pos.lng -= Math.random()/8000
+		
+	}
+	return pos
+}
+
 class StationsManager {
 	constructor() {
 		this.stations = []
@@ -254,6 +266,8 @@ function initMap(){
 		lat: 38.04481522028965,
 		lng: 23.791080055375335
 	}
+	
+	pos = randPos(pos)
 	station_manager.usr_pos = pos
 	
 	map.setCenter(pos)
@@ -261,6 +275,7 @@ function initMap(){
 	if (usr_marker) {
 		usr_marker.setMap(null)
 	}
+	
 	usr_marker = new google.maps.Marker({
 		position: pos,
 		map: map,
