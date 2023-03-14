@@ -6,6 +6,7 @@
 @font-face {
 	font-family: cormorant;
 	src: url(CormorantGaramond-Light.ttf);
+}
 
 * {
 	font-family: cormorant;
