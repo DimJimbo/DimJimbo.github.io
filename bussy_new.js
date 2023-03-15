@@ -228,7 +228,7 @@ class Station {
 		title.innerHTML = this.name
 		dist.innerHTML = this.d + 'km'
 		addr.innerHTML = this.addr
-		btn.innerHTML = '>'
+		btn.innerHTML = 'View Route >'
 		
 		new_station.appendChild(title)
 		new_station.appendChild(cont)
