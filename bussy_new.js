@@ -301,7 +301,7 @@ function initMap(){
 		lng: 23.791080055375335
 	}
 	
-	let pos = {
+	pos = {
 		lat: 37.970833,
 		lng: 23.726110
 	}
