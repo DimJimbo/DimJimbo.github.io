@@ -147,7 +147,7 @@ button.header_large > span {
 
 input[type=range] {
 	width: 70%;
-	accent-color: #00F;
+	accent-color: #999;
 	left: 0px;
 }
 
@@ -220,13 +220,23 @@ option {
 .cont > p.dist {
 	color: white;
 	font-size: 2em;
-	margin-top: 10px;
-	font-family: sans-serif;
+	margin-top: 0px;
+	margin-bottom: 0px;
 	
+}
+
+.station_inst > button {
+	color: white;
+	background-color: transparent;
+	width: fit-content;
+	aspect-ratio: 1;
+	font-size: 1.2em;
+	border: none;
 }
 
 .cont > p.address {
 	color: white;
 	font-size: 1em;
+	margin-top: 0px;
 	
 }
