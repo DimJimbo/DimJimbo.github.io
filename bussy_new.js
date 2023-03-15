@@ -88,6 +88,8 @@ let MAP = document.getElementById('MAP')
 
 let map
 let service
+let directionsService
+let directionRenderer
 let usr_marker
 
 let icons = {
@@ -216,6 +218,7 @@ class Station {
 		let cont = document.createElement('div')
 		let dist = document.createElement('p')
 		let addr = document.createElement('p')
+		let btn = document.createElement('button')
 		
 		new_station.classList.add('station_inst')
 		title.classList.add('station_name')
@@ -225,13 +228,38 @@ class Station {
 		title.innerHTML = this.name
 		dist.innerHTML = this.d + 'km'
 		addr.innerHTML = this.addr
+		btn.innerHTML = '>'
 		
 		new_station.appendChild(title)
 		new_station.appendChild(cont)
+		new_station.appendChild(btn)
 		cont.appendChild(dist)
 		cont.appendChild(addr)
 		
+		
 		this.stations_inst = new_station
+		
+		btn.addEventListener('click', (evt) => {
+			let inst = evt.target.parentNode
+			let station = Array.from(station_manager.stations.filter(station => station.stations_inst == inst))[0]
+
+
+			let p = station.marker.getPosition()
+
+			let start = new google.maps.LatLng(station_manager.usr_pos.lat, station_manager.usr_pos.lng) 
+			let end = new google.maps.LatLng(p.lat(), p.lng())
+			console.log(start, end)
+
+			directionsService.route({
+				origin: start,
+				destination: end,
+				travelMode: google.maps.TravelMode.DRIVING,
+				})
+				.then((response) => {
+				  directionRenderer.setDirections(response);
+				})
+
+		})
 	}
 	
 	appendToCont() {
@@ -258,6 +286,12 @@ function api() {
 				zoom: 11,
 				})
 	service = new google.maps.places.PlacesService(map);
+	
+	directionsService = new google.maps.DirectionsService();
+    	directionRenderer = new google.maps.DirectionsRenderer();
+	directionRenderer.setMap(map)
+	
+	initMap()
 }
 			
 function initMap(){
