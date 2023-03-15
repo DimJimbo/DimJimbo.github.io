@@ -301,6 +301,11 @@ function initMap(){
 		lng: 23.791080055375335
 	}
 	
+	let pos = {
+		lat: 37.970833,
+		lng: 23.726110
+	}
+	
 	pos = randPos(pos)
 	station_manager.usr_pos = pos
 	
