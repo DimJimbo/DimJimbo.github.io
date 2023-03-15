@@ -64,7 +64,7 @@
 						Without driving on any land
 						Granted a lot of what I say
 						Could be considered bloated
-					    But one final fact I shall lay
+					   	But one final fact I shall lay
 						I would prefer getting roasted
 						It would be a better future
 						One with more meaning
@@ -299,11 +299,6 @@ function initMap(){
 	let pos = {
 		lat: 38.04481522028965,
 		lng: 23.791080055375335
-	}
-	
-	pos = {
-		lat: 37.970833,
-		lng: 23.726110
 	}
 	
 	pos = randPos(pos)
