@@ -195,8 +195,8 @@ option {
 
 .station_inst {
 	margin-top: 10px;
-	width: 40vw;
-	height: 15vh;
+	width: 100%;
+	height: fit-content;
 	border: 2px solid #000;
 }
 
