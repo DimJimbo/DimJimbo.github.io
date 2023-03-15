@@ -10,6 +10,7 @@
 
 * {
 	font-family: sans-serif;
+	color: #000;
 }
 
 
@@ -37,8 +38,8 @@ body {
 .range_tt {
 	width: 4em;
 	height: 1em;
-	background-color: white;
-	color: black;
+	background-color: #000;
+	color: #FFF;
 	position: absolute;
 	border-radius: 50% / 100%;
 	box-shadow: 0px 0px 5px 2px #5558;
@@ -90,7 +91,7 @@ button.header_large > span {
 	top: 12.5vh;
 	
 	
-	background-color: #000D;
+	background-color: #FFFA;
 	border-radius: 2% / 3%;
 	
 	overflow-y: overlay;
@@ -100,7 +101,7 @@ button.header_large > span {
 #FUEL_SELECT {
 	margin-top: 1vh;
 	padding-bottom: 0.1vw;
-	border-bottom: 4px solid white;
+	border-bottom: 4px solid #000;
 	width: calc(100% - 2vw);
 	
 	text-align: left;
@@ -120,11 +121,11 @@ button.header_large > span {
 }
 
 .fuel_button:hover {
-	color: #FFF;
+	color: #000;
 }
 
 .selected_button {
-	color: #FFF;
+	color: #000;
 }
 
 .body_small {
@@ -147,38 +148,34 @@ button.header_large > span {
 
 input[type=range] {
 	width: 70%;
-	accent-color: #999;
+	accent-color: #95AEBA;
 	left: 0px;
 }
 
 
 
 label {
-	color: white;
 	float: left;
 }
 
 select {
 	border: none;
 	background-color: transparent;
-	color: white;
 	font-size: 1em;
 	padding: 5px;
 	
 }
 
 option {
-	background-color: black;
-	color: white;
+	background-color: #FFF;
 	
 }
 
 #refresh_button {
 	width: fit-content;
 	height: fit-content;
-	border: 2px solid white;
+	border: 2px solid #000;
 	background-color: transparent;
-	color: white;
 	font-size: 1em;
 	padding: 5px 10px 5px 10px;
 	border-radius: 25% / 50%;
@@ -193,21 +190,20 @@ option {
 #STATIONS {
 	width: calc(100% - 2vw);
 	margin-top: 2vh;
-	border-top: 4px solid white;
+	border-top: 4px solid #000;
 }
 
 .station_inst {
 	margin-top: 10px;
 	width: 40vw;
 	height: 15vh;
-	border: 2px solid white;
+	border: 2px solid #000;
 }
 
 
 .station_inst > p.station_name {
 	position: relative;
 	top: -1vh;
-	color: white;
 	margin-bottom: 0px;
 	font-size: 1em;
 }
@@ -218,7 +214,6 @@ option {
 
 
 .cont > p.dist {
-	color: white;
 	font-size: 2em;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -226,7 +221,6 @@ option {
 }
 
 .station_inst > button {
-	color: white;
 	background-color: transparent;
 	width: fit-content;
 	height: fit-content;
@@ -235,7 +229,6 @@ option {
 }
 
 .cont > p.address {
-	color: white;
 	font-size: 1em;
 	margin-top: 0px;
 	
