@@ -242,9 +242,8 @@ class Station {
 			let inst = evt.target.parentNode
 			let station = Array.from(station_manager.stations.filter(station => station.stations_inst == inst))[0]
 			
-			
-			let start = station.marker.getPosition()
-			let end = station_manager.usr_pos
+			let start = station_manager.usr_pos
+			let end = station.marker.getPosition()
 			
 			let sLLcsv = `${start.lat()},${start.lng()}`
 			let eLLcsv = `${end.lat},${end.lng}`
