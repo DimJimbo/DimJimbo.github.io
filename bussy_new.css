@@ -179,15 +179,10 @@ option {
 #refresh_button {
 	width: 5vw;
 	height: 5vh;
-	background-color: transparent;
 
 	position: relative;
 	left: 15vw;
 	top: -4vh;
-	background-image: url(glass.svg);
-	background-size: cover;
-	
-	
 }
 
 #STATIONS {
