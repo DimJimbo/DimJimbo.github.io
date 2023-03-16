@@ -249,7 +249,7 @@ class Station {
 			let start = new google.maps.LatLng(station_manager.usr_pos.lat, station_manager.usr_pos.lng) 
 			let end = new google.maps.LatLng(p.lat(), p.lng())
 			console.log(start, end)
-
+			MAP.scrollIntoView({behavior: 'smooth'})
 			directionsService.route({
 				origin: start,
 				destination: end,
@@ -330,6 +330,7 @@ function initMap(){
 	}
 
 rb.addEventListener('click', () => {
+	MAP.scrollIntoView({behavior: 'smooth'})
 	initMap()
 	
 })
