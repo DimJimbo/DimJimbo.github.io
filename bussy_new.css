@@ -234,9 +234,9 @@ option {
 	
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 	body {
-		height: 200vh;
+		height: 100vh;
 	}
 	
 	#MAP {
