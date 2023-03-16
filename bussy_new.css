@@ -233,3 +233,19 @@ option {
 	margin-top: 0px;
 	
 }
+
+@media (max-width: 900px) {
+	body {
+		height: 200vh;
+	}
+	
+	#MAP {
+		left: 0px;
+		width: 100vw;
+	}
+	
+	#SELECTION {
+		width: 90vw;
+		top: 100vh;
+	}
+}
