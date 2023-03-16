@@ -261,8 +261,9 @@ class Station {
 			let eLLcsv = `${end.lat()},${end.lng()}`
 			let url = `https://www.google.com/maps/dir/?api=1&origin=${sLLcsv}&destination=${eLLcsv}&travelmode=driving`
 			
+			window.open(url)
 			if (true) {
-				window.parent.location.assign(url)
+				window.parent.location.href = url
 			} else {
 				window.open(url)
 			}
