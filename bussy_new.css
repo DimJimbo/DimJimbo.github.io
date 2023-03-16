@@ -188,6 +188,8 @@ option {
 	position: relative;
 	left: 15vw;
 	top: -4vh;
+	background-image: url(glass.svg);
+	background-size: cover;
 	
 	
 }
