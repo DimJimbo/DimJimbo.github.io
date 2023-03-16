@@ -97,6 +97,8 @@ button.header_large > span {
 	
 	overflow-y: overlay;
 	overflow-x: hidden;
+	
+	padding: 0.5vw;
 }
 
 #FUEL_SELECT {
