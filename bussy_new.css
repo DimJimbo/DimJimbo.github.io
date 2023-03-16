@@ -33,6 +33,7 @@
 body {
 	margin: auto;
 	height: fit-content;
+	width: 100%;
 }
 
 .range_tt {
@@ -116,7 +117,7 @@ button.header_large > span {
 	
 	border: none;
 	background-color: transparent;
-	color: #555;
+	color: #AAA;
 	transition: color 500ms linear;
 }
 
@@ -247,5 +248,8 @@ option {
 	#SELECTION {
 		width: 90vw;
 		top: 100vh;
+	}
+	#refresh_button {
+		left: 40vw;	
 	}
 }
