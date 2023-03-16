@@ -257,8 +257,8 @@ class Station {
 			let start = station_manager.usr_pos
 			let end = station.marker.getPosition()
 			
-			let sLLcsv = `${start.lat()},${start.lng()}`
-			let eLLcsv = `${end.lat},${end.lng}`
+			let sLLcsv = `${start.lat},${start.lng}`
+			let eLLcsv = `${end.lat()},${end.lng()}`
 			let url = `https://www.google.com/maps/dir/?api=1&origin=${sLLcsv}&destination=${eLLcsv}&travelmode=driving`
 			
 			if (isMobile) {
