@@ -106,7 +106,6 @@ function updRangeVal() {
 	let pad = Math.round(parseInt(sel.offsetWidth)*0.27)
 	d_input_tt.style.left = pad + ((d_input_n - min) * offset - d_input_tt.offsetWidth / 2 - (d_input_n / max - min - 0.5) * thumbWidth) + 'px'
 	d_input_tt.innerHTML = `${d_input.value/10}` + 'km'
-	console.log(d_input_tt.style.left)
 }
 
 updRangeVal()
@@ -242,14 +241,24 @@ class Station {
 		btn.addEventListener('click', (evt) => {
 			let inst = evt.target.parentNode
 			let station = Array.from(station_manager.stations.filter(station => station.stations_inst == inst))[0]
-
-
+			
+			
+			let start = station.marker.getPosition()
+			let end = station_manager.usr_pos
+			
+			let sLLcsv = `${start.lat()},${start.lng()}`
+			let eLLcsv = `${end.lat},${end.lng}`
+			let url = `https://www.google.com/maps/dir/?api=1&origin=${sLLcsv}&destination=${eLLcsv}&travelmode=driving`
+					
+			window.open(url)
+			MAP.scrollIntoView({behavior: 'smooth'})
+			/*
 			let p = station.marker.getPosition()
-
+			
 			let start = new google.maps.LatLng(station_manager.usr_pos.lat, station_manager.usr_pos.lng) 
 			let end = new google.maps.LatLng(p.lat(), p.lng())
-			console.log(start, end)
-			MAP.scrollIntoView({behavior: 'smooth'})
+			
+			
 			directionsService.route({
 				origin: start,
 				destination: end,
@@ -258,6 +267,7 @@ class Station {
 				.then((response) => {
 				  directionRenderer.setDirections(response);
 				})
+			*/
 
 		})
 	}
