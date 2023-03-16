@@ -177,8 +177,8 @@ option {
 }
 
 #refresh_button {
-	width: 5vw;
-	height: 5vh;
+	width: fit-content;
+	height: fit-content;
 	
 	border: 2px solid #000;
 	background-color: transparent;
