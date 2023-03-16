@@ -252,6 +252,8 @@ option {
 		top: 100vh;
 	}
 	#refresh_button {
-		left: 40vw;	
+		left: 75vw;
+		top: 10vh;
+		
 	}
 }
