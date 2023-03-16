@@ -152,13 +152,16 @@ button.header_large > span {
 input[type=range] {
 	width: 70%;
 	accent-color: #95AEBA;
-	left: 0px;
+	position: relative;
+	left: -10%;
 }
 
 
 
 label {
 	float: left;
+	position: relative;
+	left: -10%;
 }
 
 select {
@@ -184,8 +187,8 @@ option {
 	border-radius: 25% / 50%;
 
 	position: relative;
-	left: 20vw;
-	top: 1.5vh;
+	left: 15vw;
+	top: -4vh;
 	
 	
 }
@@ -253,8 +256,8 @@ option {
 	}
 	#refresh_button {
 		position: absolute;
-		left: 75vw;
-		top: 10vh;
+		left: 35vw;
+		top: -6vh;
 		
 	}
 }
