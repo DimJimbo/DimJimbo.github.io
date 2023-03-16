@@ -252,6 +252,7 @@ option {
 		top: 100vh;
 	}
 	#refresh_button {
+		position: absolute;
 		left: 75vw;
 		top: 10vh;
 		
