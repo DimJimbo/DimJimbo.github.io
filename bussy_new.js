@@ -325,8 +325,8 @@ function api() {
 function initMap(){
 	
 	let pos = {
-		lat: 38.04481522028965,
-		lng: 23.791080055375335
+		lat: 37.84010045388643, 
+		lng: 23.80680061133282
 	}
 	
 	pos = randPos(pos)
