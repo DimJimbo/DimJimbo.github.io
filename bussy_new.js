@@ -121,7 +121,7 @@ function updRangeVal() {
 }
 
 updRangeVal()
-
+/*
 function randPos(pos) {
 	if (Math.round(Math.random())) {
 		pos.lat += Math.random()/8000
@@ -133,7 +133,7 @@ function randPos(pos) {
 	}
 	return pos
 }
-
+*/
 class StationsManager {
 	constructor() {
 		this.stations = []
@@ -325,11 +325,11 @@ function api() {
 function initMap(){
 	
 	let pos = {
-		lat: 37.84010045388643, 
-		lng: 23.80680061133282
+		lat: 0, 
+		lng: 0
 	}
 	
-	pos = randPos(pos)
+	// pos = randPos(pos)
 	station_manager.usr_pos = pos
 	
 	map.setCenter(pos)
