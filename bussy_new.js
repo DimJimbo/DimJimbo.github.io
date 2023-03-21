@@ -270,9 +270,9 @@ class Station {
 
 function load_google_api() {
 	let script = document.createElement('script')
-    script.type = 'text/javascript'
-    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBRhQFRZnOH8nNthHlICZDQJ7vbt_jFeAU&libraries=places&callback=api'
-    document.head.appendChild(script)
+    	script.type = 'text/javascript'
+    	script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBRhQFRZnOH8nNthHlICZDQJ7vbt_jFeAU&libraries=places&callback=api'
+    	document.head.appendChild(script)
 }
 
 window.onload = load_google_api
@@ -286,9 +286,7 @@ function api() {
 	
 	directionsService = new google.maps.DirectionsService();
     	directionRenderer = new google.maps.DirectionsRenderer();
-	directionRenderer.setMap(map)
-	
-	initMap()
+	directionRenderer.setMap(map)	
 }
 			
 window.onmessage = (evt) => {
