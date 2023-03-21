@@ -73,7 +73,6 @@
 */
 
 const sel = document.getElementById('SELECTION')
-const rb = document.getElementById('refresh_button')
 const ftypes = Array.from(document.querySelectorAll('#FUEL_SELECT > *'))
 const stations = document.getElementById('STATIONS')
 const d_input = document.getElementById('dist_input')
