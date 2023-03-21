@@ -292,6 +292,7 @@ function api() {
 }
 			
 window.onmessage = (evt) => {
+	MAP.scrollIntoView({behavior: 'smooth'})
 	
 	let pos = evt.data
 	console.log(pos)
@@ -322,13 +323,6 @@ window.onmessage = (evt) => {
 	service.textSearch(req, (stations, status) => {station_manager.populate(stations, status)})
 
 	}
-
-rb.addEventListener('click', () => {
-	MAP.scrollIntoView({behavior: 'smooth'})
-	initMap()
-	
-})
-
 for (let t of ftypes) {
 	t.addEventListener('click', (event) => {
 		let sel_type = event.target
