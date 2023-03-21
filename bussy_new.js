@@ -71,10 +71,9 @@
 						I advise you to keep away
 						Lest you want to hang from the ceiling
 */
-
-console.log(window.parent, window.top)
-window.parent.postMessage('1', '*')
-
+window.onmessage = (evt) => {
+	console.log(evt)
+}
 
 const sel = document.getElementById('SELECTION')
 const rb = document.getElementById('refresh_button')
