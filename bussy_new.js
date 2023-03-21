@@ -71,9 +71,6 @@
 						I advise you to keep away
 						Lest you want to hang from the ceiling
 */
-window.onmessage = (evt) => {
-	console.log(evt)
-}
 
 const sel = document.getElementById('SELECTION')
 const rb = document.getElementById('refresh_button')
@@ -109,19 +106,7 @@ function updRangeVal() {
 }
 
 updRangeVal()
-/*
-function randPos(pos) {
-	if (Math.round(Math.random())) {
-		pos.lat += Math.random()/8000
-		pos.lng += Math.random()/8000
-	} else {
-		pos.lat -= Math.random()/8000
-		pos.lng -= Math.random()/8000
-		
-	}
-	return pos
-}
-*/
+
 class StationsManager {
 	constructor() {
 		this.stations = []
@@ -306,14 +291,11 @@ function api() {
 	initMap()
 }
 			
-function initMap(){
+window.onmessage = (evt) => {
 	
-	let pos = {
-		lat: 0, 
-		lng: 0
-	}
+	let pos = evt.data
+	console.log(pos)
 	
-	// pos = randPos(pos)
 	station_manager.usr_pos = pos
 	
 	map.setCenter(pos)
