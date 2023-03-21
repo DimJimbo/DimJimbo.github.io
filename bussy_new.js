@@ -72,6 +72,8 @@
 						Lest you want to hang from the ceiling
 */
 
+console.log(window.parent, window.top)
+window.parent.postMessage('1', '*')
 
 
 const sel = document.getElementById('SELECTION')
